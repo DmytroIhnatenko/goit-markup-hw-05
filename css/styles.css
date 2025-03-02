@@ -752,7 +752,6 @@ address {
   visibility: hidden;
   transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
 }
-
 .backdrop.is-open {
   opacity: 1;
   visibility: visible;
@@ -809,6 +808,49 @@ address {
   padding: 5px 38px;
 }
 
+.input-group {
+  margin-bottom: 8px;
+}
+
+.input-container,
+.textarea-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #f4f4fd;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.input-container:focus-within,
+.textarea-container:focus-within {
+  border-color: #4d5ae5;
+}
+
+.input-container .icon,
+.textarea-container .icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: rgba(46, 47, 66, 0.4);
+  transition: fill 250ms ease-in-out;
+}
+
+.input-container:focus-within .icon {
+  fill: #4d5ae5;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 5px 38px;
+}
+
 .send-btn {
   display: block;
   min-width: 169px;
@@ -820,7 +862,59 @@ address {
   transition: background-color 250ms ease-in-out;
   margin: 0 auto;
 }
-
 .send-btn:hover {
   background-color: #404bbf;
+}
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+.modal {
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: transform 250ms ease-in-out;
+}
+
+.backdrop.is-open .modal {
+  transform: translate(-50%, -50%) scale(1);
+}
+:target {
+  opacity: 1;
+  visibility: visible;
+}
+:target .modal {
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out, border 250ms ease-in-out;
+}
+.modal-close:hover {
+  background-color: #404bbf;
+  border: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 408px;
+  min-height: 300px;
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 72px 24px 24px;
+  transition: transform 250ms ease-in-out;
 }
