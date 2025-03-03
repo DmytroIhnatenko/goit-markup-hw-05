@@ -934,7 +934,8 @@ address {
   color: white;
   border: none;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: 0 auto;
   font-size: 16px;
   font-weight: 500;
