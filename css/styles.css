@@ -763,7 +763,7 @@ address {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 24px 24px;
   transform: translate(-50%, -50%);
   width: 408px;
   min-height: 584px;
@@ -778,8 +778,7 @@ address {
   width: 24px;
   height: 24px;
   background-color: #e7e9fc;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   position: absolute;
@@ -800,8 +799,8 @@ address {
 .close-popup .svg-icon-modal {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-popup:hover .svg-icon-modal use,
-.close-popup:focus .svg-icon-modal use {
+.close-popup:hover .svg-icon-modal,
+.close-popup:focus .svg-icon-modal {
   fill: #ffffff;
 }
 
@@ -909,7 +908,7 @@ address {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.visually-hidden:checked + label .checkbox-custom {
+.hidden-checkbox:checked + label .checkbox-custom {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
@@ -922,13 +921,9 @@ address {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.policy-link:hover {
-  color: #404bbf;
-}
-
+.policy-link:hover,
 .policy-link:focus {
   color: #404bbf;
-  outline: none;
 }
 
 .submit-button {
@@ -950,11 +945,7 @@ address {
 .submit-button:hover {
   background-color: #404bbf;
 }
-:target {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
-}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
